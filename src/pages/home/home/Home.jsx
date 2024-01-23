@@ -3,10 +3,12 @@ import { AuthContext } from "../../../Providers/AuthProviders";
 import Swal from "sweetalert2";
 import useTask from "../../../components/Hooks/useTask";
 import useCart from "../../../components/Hooks/useCart";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const { user } = useContext(AuthContext);
   const [refetch] = useCart();
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -34,6 +36,7 @@ const Home = () => {
       .then((data) => {
         if (data.success === true) {
           Swal.fire("Task Add successfully!");
+          navigate("/save");
           // refetch();
         } else {
           Swal.fire("Already add the task!");
@@ -46,7 +49,7 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-[50vh]">
       <div className="hero mt-12">
         <div className="hero-content lg:w-[700px] flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left"></div>
