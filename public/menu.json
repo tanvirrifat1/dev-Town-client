@@ -1,0 +1,212 @@
+[
+    {
+        "_id": "642c155b2c4774f05c36eeaa",
+        "name": "Rolex",
+        "details": "Rolex is the leading name in luxury wristwatches. It is headquartered in Geneva, Switzerland, but relies on 4,000 watchmakers in more than 100 countries.",
+        "image": "https://i.ibb.co/R7CjsTB/Rolex-datejust-31-midsize-blue-dial-steel-ladies-watch-78240-49674-d397c-sm.jpg",
+        "category": "Rolex",
+        "price": "548"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb9",
+        "name": "TAG_Heuer",
+        "details": "TAG Heuer is based in La Chaux-de-Fonds, Switzerland, and is led by CEO Frédéric Arnault. Jack Heuer, great-grandson of the founder, is the honorary chairman.",
+        "image": "https://i.ibb.co/7vzvWxQ/images-1.jpg",
+        "category": "TAG_Heuer",
+        "price": "297"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7c",
+        "name": "Rolex",
+        "details": "Rolex is a renowned luxury watch brand known for its high-quality craftsmanship, precision, and iconic designs. Founded in 1905 by Hans Wilsdorf and Alfred Davis in London, England, Rolex has become one of the most recognizable and sought-after watch brands in the world.",
+        "image": "https://i.ibb.co/HxjZQVm/rolex-datejust-31-midsize-blue-dial-steel-ladies-watch-78240-49674-d397c-sm.jpg",
+        "category": "popular",
+        "price": "456"
+    },
+    
+    {
+        "_id": "642c155b2c4774f05c36ee7a",
+        "name": "Omega",
+        "details": "Omega is another prestigious and well-respected Swiss luxury watch brand known for its high-quality timepieces, innovative technology, and strong connections to both space exploration and sports timing.",
+        "image": "https://i.ibb.co/ryqWxBf/3-1617831186.jpg",
+        "category": "popular",
+        "price": "654"
+    },
+ 
+    {
+        "_id": "642c155b2c4774f05c36ee8a",
+        "name": "Fitbit",
+        "details": "Fitbit (stylized as fitbit) is an American consumer electronics and fitness company. It produces wireless-enabled wearable technology, physical fitness monitors and activity trackers such as smartwatches,",
+        "image": "https://i.ibb.co/kmHwsSc/s-l400.jpg",
+        "category": "Fitbit",
+        "price": "357"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee81",
+        "name": "Omega",
+        "details": "Omega SA is a Swiss luxury watchmaker based in Biel/Bienne, Switzerland. Founded by Louis Brandt in La Chaux-de-Fonds in 1903, the company formerly operated as La Generale Watch Co",
+        "image": "https://i.ibb.co/SmK7wt7/29709195-rs27rwix6gc44dgjnwisuy5m-Extra-Large.webp",
+        "category": "Omega",
+        "price": "159"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee84",
+        "name": "Fitbit",
+        "details": "Fitbit (stylized as fitbit) is an American consumer electronics and fitness company. It produces wireless-enabled wearable technology, physical fitness monitors and activity trackers such as smartwatches,",
+        "image": "https://i.ibb.co/F43QJFw/images.jpg",
+        "category": "Fitbit",
+        "price": "951"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea5",
+        "name": "Rolex",
+        "details": "Rolex is the leading name in luxury wristwatches. It is headquartered in Geneva, Switzerland, but relies on 4,000 watchmakers in more than 100 countries.",
+        "image": "https://i.ibb.co/GRc0ZbX/images.jpg",
+        "category": "Rolex",
+        "price": "320"    },
+    
+    {
+        "_id": "642c155b2c4774f05c36ee83",
+        "name": "Omega",
+        "details": "Omega SA is a Swiss luxury watchmaker based in Biel/Bienne, Switzerland. Founded by Louis Brandt in La Chaux-de-Fonds in 1903, the company formerly operated as La Generale Watch Co",
+        "image": "https://i.ibb.co/ZS9GgVj/images-1.jpg",
+        "category": "Omega",
+        "price": "963"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7f",
+        "name": "Fitbit",
+        "details": "Fitbit is a well-known brand in the fitness and health technology industry, specializing in wearable devices that track various aspects of your daily activity, exercise, sleep, and overall well-being. ",
+        "image": "https://i.ibb.co/MhkPq0j/Rebel-649525-hi-res.jpg",
+        "category": "popular",
+        "price": "258"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea8",
+        "name": "Rolex",
+        "details": "Rolex is the leading name in luxury wristwatches. It is headquartered in Geneva, Switzerland, but relies on 4,000 watchmakers in more than 100 countries.",
+        "image": "https://i.ibb.co/qprYHxR/s-l1200.webp",
+        "category": "Rolex",
+        "price": "852"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeba",
+        "name": "TAG_Heuer",
+        "details": "TAG Heuer is based in La Chaux-de-Fonds, Switzerland, and is led by CEO Frédéric Arnault. Jack Heuer, great-grandson of the founder, is the honorary chairman.",
+        "image": "https://i.ibb.co/j30dssJ/images.jpg",
+        "category": "TAG_Heuer",
+        "price": "745"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee80",
+        "name": "Omega",
+        "details": "Omega SA is a Swiss luxury watchmaker based in Biel/Bienne, Switzerland. Founded by Louis Brandt in La Chaux-de-Fonds in 1903, the company formerly operated as La Generale Watch Co",
+        "image": "https://i.ibb.co/wKJ2Xjj/images-2.jpg",
+        "category": "Omega",
+        "price": "985"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea7",
+        "name": "Rolex",
+        "details": "Rolex is the leading name in luxury wristwatches. It is headquartered in Geneva, Switzerland, but relies on 4,000 watchmakers in more than 100 countries.",
+        "image": "https://i.ibb.co/V9dZnt1/eolex.jpg",
+        "category": "Rolex",
+        "price": "564"    },
+    {
+        "_id": "642c155b2c4774f05c36eeb8",
+        "name": "Garmin",
+        "details": "Garmin partnered with the Volkswagen Group between 2011-2016 to supply the Volkswagen Up!, SEAT Mii and Skoda Citigo with providing the maps and more systems that incorporates GPS, vehicle details as well as audio selection and used unbranded Alpine audio systems.",
+        "image": "https://i.ibb.co/1nGFzbh/images.jpg",
+        "category": "Garmin",
+        "price": "324"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7e",
+        "name": "TAG_Heuer",
+        "details": "TAG Heuer is a Swiss luxury watch brand known for its prestigious timepieces that blend precision engineering, innovation, and sporty elegance. ",
+        "image": "https://i.ibb.co/j30dssJ/images.jpg",
+        "category": "popular",
+        "price": "123"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8b",
+        "name": "Fitbit",
+        "details": "Fitbit (stylized as fitbit) is an American consumer electronics and fitness company. It produces wireless-enabled wearable technology, physical fitness monitors and activity trackers such as smartwatches,",
+        "image": "https://i.ibb.co/Mc9364x/Fitbit-Versa-4-Smart-Watch.jpg",
+        "category": "Fitbit",
+        "price": "654"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8f",
+        "name": "Fitbit",
+        "details": "Fitbit (stylized as fitbit) is an American consumer electronics and fitness company. It produces wireless-enabled wearable technology, physical fitness monitors and activity trackers such as smartwatches,",
+        "image": "https://i.ibb.co/vDB0NqJ/89874.jpg",
+        "category": "Fitbit",
+        "price": "745"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb7",
+        "name": "Garmin",
+        "details": "Garmin partnered with the Volkswagen Group between 2011-2016 to supply the Volkswagen Up!, SEAT Mii and Skoda Citigo with providing the maps and more systems that incorporates GPS, vehicle details as well as audio selection and used unbranded Alpine audio systems.",
+        "image": "https://i.ibb.co/vjnNwps/forerunner-745-black-cf-lg.jpg",
+        "category": "Garmin",
+        "price": "985"    },
+    {
+        "_id": "642c155b2c4774f05c36ee9c",
+        "name": "Breitling",
+        "details": "Breitling is a Swiss luxury watchmaker known for its precision timepieces, particularly those designed for aviation and professional use. The company was founded in 1884 by Léon Breitling in Saint-Imier",
+        "image": "https://i.ibb.co/rGfrsRV/ub0134101c1u1-breitling-chronomat-42mm-mens-blue-dial-steel-18k-red-gold-bracelet-watch-08-21-2-6159.jpg",
+        "category": "Breitling",
+        "price": "124"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee9d",
+        "name": "Breitling",
+        "details": "Breitling is a Swiss luxury watchmaker known for its precision timepieces, particularly those designed for aviation and professional use. The company was founded in 1884 by Léon Breitling in Saint-Imier",
+        "image": "https://i.ibb.co/3hnrcKM/images.jpg",
+        "category": "Breitling",
+        "price": "325"
+    },
+    
+    {
+        "_id": "642c155b2c4774f05c36eeb4",
+        "name": "Garmin",
+        "details": "Garmin partnered with the Volkswagen Group between 2011-2016 to supply the Volkswagen Up!, SEAT Mii and Skoda Citigo with providing the maps and more systems that incorporates GPS, vehicle details as well as audio selection and used unbranded Alpine audio systems.",
+        "image": "https://i.ibb.co/YkWKKYV/GAVF5-LGBK-garmin-vivosmart-5-smartwatch-large-black.jpg",
+        "category": "Garmin",
+        "price": "325"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee98",
+        "name": "Breitling",
+        "details": "Breitling is a Swiss luxury watchmaker known for its precision timepieces, particularly those designed for aviation and professional use. The company was founded in 1884 by Léon Breitling in Saint-Imier",
+        "image": "https://i.ibb.co/syrSgf5/84-37-731.webp",
+        "category": "Breitling",
+        "price": "154"
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee82",
+        "name": "Omega",
+        "details": "Omega SA is a Swiss luxury watchmaker based in Biel/Bienne, Switzerland. Founded by Louis Brandt in La Chaux-de-Fonds in 1903, the company formerly operated as La Generale Watch Co",
+        "image": "https://i.ibb.co/C6K5wGg/images.jpg",
+        "category": "Omega",
+        "price": "359"
+    },
+   
+    {
+        "_id": "642c155b2c4774f05c36ee9a",
+        "name": "Breitling",
+        "details": "Breitling is a Swiss luxury watchmaker known for its precision timepieces, particularly those designed for aviation and professional use. The company was founded in 1884 by Léon Breitling in Saint-Imier",
+        "image": "https://i.ibb.co/SRPFx3R/download.jpg",
+        "category": "Breitling",
+        "price": "245"
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeae",
+        "name": "Garmin",
+        "details": "Garmin partnered with the Volkswagen Group between 2011-2016 to supply the Volkswagen Up!, SEAT Mii and Skoda Citigo with providing the maps and more systems that incorporates GPS, vehicle details as well as audio selection and used unbranded Alpine audio systems.",
+        "image": "https://i.ibb.co/KK9cgXK/images-1.jpg",
+        "category": "Garmin",
+        "price": "145"
+    }
+]

@@ -1,0 +1,31 @@
+.banner{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+
+.image-container {
+  position: relative;
+  display: inline-block; /* Keeps the overlay within the image boundaries */
+}
+
+.image {
+  width: 100%; /* Adjust as needed */
+  height: auto; /* Maintain the image's aspect ratio */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity and color as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+}
