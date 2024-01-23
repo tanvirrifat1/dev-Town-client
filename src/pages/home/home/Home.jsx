@@ -1,10 +1,12 @@
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../../../Providers/AuthProviders";
 import Swal from "sweetalert2";
+import useTask from "../../../components/Hooks/useTask";
+import useCart from "../../../components/Hooks/useCart";
 
 const Home = () => {
   const { user } = useContext(AuthContext);
-  console.log(user);
+  const [refetch] = useCart();
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -32,6 +34,7 @@ const Home = () => {
       .then((data) => {
         if (data.success === true) {
           Swal.fire("Task Add successfully!");
+          // refetch();
         } else {
           Swal.fire("Already add the task!");
         }
@@ -49,26 +52,6 @@ const Home = () => {
           <div className="text-center lg:text-left"></div>
           <div className="card shrink-0 w-full shadow-2xl bg-base-100">
             <form onSubmit={handleSubmit} className="card-body">
-              {/* <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Select Option</span>
-                </label>
-                <select required name="web" className="select select-bordered ">
-                  <option value="" disabled selected>
-                    Task Name
-                  </option>
-                  <option name="web-development" value="web-development">
-                    Web Development
-                  </option>
-                  <option name="Digital-marketing" value="Digital-marketing">
-                    Digital marketing
-                  </option>
-                  <option name="Graphics-designer" value="Graphics-designer">
-                    Graphics designer
-                  </option>
-                </select>
-              </div> */}
-
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Title</span>

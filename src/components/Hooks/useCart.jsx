@@ -3,7 +3,6 @@ import { useAuth } from "../../hooks/useAuth";
 
 const useCart = () => {
   const { user } = useAuth();
-  console.log(user);
 
   const { cart, refetch, isLoading } = useQuery({
     queryKey: [],

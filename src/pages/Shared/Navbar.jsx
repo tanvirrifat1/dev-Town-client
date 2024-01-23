@@ -8,14 +8,15 @@ import logo from "../../assets/assets/watchMenu2.png";
 import { getUserInfo } from "./auth/auth.service";
 import { FaUserLarge } from "react-icons/fa6";
 import useCart from "../../components/Hooks/useCart";
+import useTask from "../../components/Hooks/useTask";
 
 const Navbar = () => {
-  const [cart, refetch] = useCart();
+  const [task, refetch] = useTask();
 
   const { user, logOut } = useContext(AuthContext);
 
   const { role } = getUserInfo();
-  console.log(role);
+
   const handleLogOut = () => {
     logOut()
       .then(() => {})
@@ -33,56 +34,20 @@ const Navbar = () => {
         </li>
 
         <li className="text-gray-300 lg:hover:text-slate-400">
-          <NavLink to="/order/Rolex">Save task</NavLink>
+          <NavLink to="/save">Save task</NavLink>
         </li>
 
-        {user ? (
-          <>
-            <li>
-              {role === "admin" ? (
-                <>
-                  <button
-                    href="#"
-                    className="text-gray-300 lg:hover:text-slate-400"
-                  >
-                    <Link to="/dashBoard/adminHome">DashBoard</Link>
-                  </button>
-                </>
-              ) : (
-                <></>
-              )}
-            </li>
-          </>
-        ) : (
-          <></>
-        )}
-
-        {user ? (
-          <></>
-        ) : (
-          <>
-            <li>
-              <button
-                href="#"
-                className="text-gray-300 lg:hover:text-slate-400"
-              >
-                <Link to="/login">Login</Link>
-              </button>
-            </li>
-          </>
-        )}
-
-        <li>
+        {/* <li>
           <label
             htmlFor="my-drawer-4"
             className="text-gray-300 lg:hover:text-slate-400 mt-1"
           >
-            <FaShoppingCart className="text-xl " />
+            <span>Save task</span>
             <div className="badge badge-secondary text-white -mt-6 ">
-              +{cart?.data?.length || 0}
+              +{task?.data?.length || 0}
             </div>
           </label>
-        </li>
+        </li> */}
       </ul>
     </>
   );
@@ -162,7 +127,7 @@ const Navbar = () => {
                   <span className="text-primary">{user?.displayName}</span>
                 </p>
               </li>
-              {user ? (
+              {/* {user ? (
                 <>
                   <li className="">
                     {role !== "user" ? (
@@ -188,7 +153,7 @@ const Navbar = () => {
                 </>
               ) : (
                 <></>
-              )}
+              )} */}
 
               {user ? (
                 <>

@@ -12,6 +12,7 @@ import Dashboard from "../Layout/Dashboard";
 import AllUser from "../pages/DashBoard/AllUsers/AllUser";
 
 import ErrorPage from "../components/Error/ErrorPage";
+import SaveTask from "../components/SaveTask/SaveTask";
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp />,
+      },
+      {
+        path: "/save",
+        element: <SaveTask />,
       },
 
       {

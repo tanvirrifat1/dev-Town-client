@@ -84,7 +84,7 @@ const Login = () => {
           image: user.photoURL,
         };
 
-        fetch("http://localhost:5000/api/v1/auth/login", {
+        fetch("http://localhost:5000/api/v1/user", {
           method: "POST",
           headers: {
             "content-type": "application/json",
