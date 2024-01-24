@@ -1,13 +1,11 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
-import { FaShoppingCart } from "react-icons/fa";
 
-import Drawer from "./Drawer/Page";
-import logo from "../../assets/assets/watchMenu2.png";
+import logo from "../../assets/assets/task.jpeg";
 import { getUserInfo } from "./auth/auth.service";
 import { FaUserLarge } from "react-icons/fa6";
-import useCart from "../../components/Hooks/useCart";
+
 import useTask from "../../components/Hooks/useTask";
 
 const Navbar = () => {
@@ -36,18 +34,6 @@ const Navbar = () => {
         <li className="text-gray-300 lg:hover:text-slate-400">
           <NavLink to="/save">Save task</NavLink>
         </li>
-
-        {/* <li>
-          <label
-            htmlFor="my-drawer-4"
-            className="text-gray-300 lg:hover:text-slate-400 mt-1"
-          >
-            <span>Save task</span>
-            <div className="badge badge-secondary text-white -mt-6 ">
-              +{task?.data?.length || 0}
-            </div>
-          </label>
-        </li> */}
       </ul>
     </>
   );
@@ -85,11 +71,8 @@ const Navbar = () => {
             onClick={() => window.location.assign("/")}
             className="flex justify-center "
           >
-            <div className="w-12 h-12 ">
-              <img className="rounded-full" src={logo} alt="" />
-            </div>
+            <p className="text-xl font-semibold shadow-md">Home</p>
           </div>
-          <Drawer />
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navOption}</ul>

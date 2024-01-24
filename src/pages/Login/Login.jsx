@@ -1,13 +1,8 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 
 import img from "../../assets/others/authentication.gif";
 
-import {
-  loadCaptchaEnginge,
-  LoadCanvasTemplate,
-  validateCaptcha,
-} from "react-simple-captcha";
 import { AuthContext } from "../../Providers/AuthProviders";
 import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
@@ -16,17 +11,12 @@ import { BiArrowBack } from "react-icons/bi";
 import { toast } from "react-toastify";
 
 const Login = () => {
-  const [disable, setDisabled] = useState(true);
   const { signIn, googleSignIn } = useContext(AuthContext);
 
   const navigate = useNavigate();
   const location = useLocation();
 
   const from = location.state?.from?.pathname || "/";
-
-  // useEffect(() => {
-  //   loadCaptchaEnginge(6);
-  // }, []);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -64,15 +54,6 @@ const Login = () => {
       });
   };
 
-  // const handleValidationCaptcha = (e) => {
-  //   const value = e.target.value;
-  //   if (validateCaptcha(value)) {
-  //     setDisabled(false);
-  //   } else {
-  //     setDisabled(true);
-  //   }
-  // };
-
   const handleGoogleLogin = () => {
     googleSignIn()
       .then((result) => {
@@ -103,9 +84,6 @@ const Login = () => {
 
   return (
     <div>
-      <Helmet>
-        <title>Time-Square | Login</title>
-      </Helmet>
       <div>
         <Link to={"/"}>
           <BiArrowBack className="text-3xl ml-6 mt-9" />
@@ -148,21 +126,7 @@ const Login = () => {
                     </a>
                   </label>
                 </div>
-                {/* <div className="form-control">
-                  <label className="label">
-                    <LoadCanvasTemplate />
-                  </label>
-                  <input
-                    onBlur={handleValidationCaptcha}
-                    type="text"
-                    name="captcha"
-                    placeholder="text the captcha"
-                    className="input input-success"
-                  />
-                  <button className="btn btn-outline btn-xs btn-success mt-2">
-                    Validation
-                  </button>
-                </div> */}
+
                 <div className="form-control mt-6">
                   <input
                     className="btn btn-outline btn-success"

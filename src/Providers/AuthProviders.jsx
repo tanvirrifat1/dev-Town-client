@@ -54,7 +54,7 @@ const AuthProvider = ({ children }) => {
       setUser(currentUser);
       if (currentUser) {
         axios
-          .post("https://watch-shop-mongoose.vercel.app/api/v1/auth/login", {
+          .post("http://localhost:5000/api/v1/auth/login", {
             email: currentUser.email,
           })
           .then((data) => {

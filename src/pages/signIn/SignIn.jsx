@@ -158,9 +158,6 @@ const SignUp = () => {
 
   return (
     <div>
-      <Helmet>
-        <title>Time-Square | SignUp</title>
-      </Helmet>
       <div>
         <Link to={"/"}>
           <BiArrowBack className="text-3xl ml-6 mt-9" />

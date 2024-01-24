@@ -9,8 +9,6 @@ import PrivateRoute from "./PrivateRoute";
 
 import Dashboard from "../Layout/Dashboard";
 
-import AllUser from "../pages/DashBoard/AllUsers/AllUser";
-
 import ErrorPage from "../components/Error/ErrorPage";
 import SaveTask from "../components/SaveTask/SaveTask";
 
@@ -44,20 +42,6 @@ export const router = createBrowserRouter([
       {
         path: "*",
         element: <ErrorPage />,
-      },
-    ],
-  },
-  {
-    path: "dashBoard",
-    element: (
-      <PrivateRoute>
-        <Dashboard />
-      </PrivateRoute>
-    ),
-    children: [
-      {
-        path: "allUsers",
-        element: <AllUser />,
       },
     ],
   },
