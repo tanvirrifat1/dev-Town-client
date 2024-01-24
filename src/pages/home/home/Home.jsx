@@ -13,56 +13,11 @@ const Home = () => {
   const { user } = useContext(AuthContext);
   const [startDate, setStartDate] = useState(new Date());
   const date = format(startDate, 'PP');
-  const [refetch] = useCart();
+
   const navigate = useNavigate();
 
-  // console.log(startDate, 'hello2');
-
-  // const handleSubmit = e => {
-  //   e.preventDefault();
-  //   const form = e.target;
-  //   const title = form.elements.web.value;
-
-  //   const description = form.elements.description.value;
-
-  //   const email = user?.email;
-
-  //   const booking = {
-  //     title,
-  //     email,
-
-  //     description,
-  //   };
-
-  //   fetch(`http://localhost:5000/api/v1/task/create`, {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify(booking),
-  //   })
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       if (data.success === true) {
-  //         Swal.fire('Task Add successfully!');
-  //         navigate('/save');
-  //         // refetch();
-  //       } else {
-  //         Swal.fire('Already add the task!');
-  //       }
-  //       form.reset();
-  //     })
-  //     .catch(error => {
-  //       console.error('Error:', error);
-  //     });
-  // };
-
-  // const onSubmit = async data => {
-  //   console.log(data, date);
-  // };
   const handleDateChange = newDate => {
     setStartDate(newDate);
-    console.log(newDate, 'hello');
   };
   const onSubmit = async data => {
     const BookData = {

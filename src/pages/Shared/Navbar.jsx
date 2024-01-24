@@ -1,12 +1,12 @@
-import { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
-import { AuthContext } from "../../Providers/AuthProviders";
+import { useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProviders';
 
-import logo from "../../assets/assets/task.jpeg";
-import { getUserInfo } from "./auth/auth.service";
-import { FaUserLarge } from "react-icons/fa6";
+import logo from '../../assets/assets/task.jpeg';
+import { getUserInfo } from './auth/auth.service';
+import { FaUserLarge } from 'react-icons/fa6';
 
-import useTask from "../../components/Hooks/useTask";
+import useTask from '../../components/Hooks/useTask';
 
 const Navbar = () => {
   const [task, refetch] = useTask();
@@ -18,7 +18,7 @@ const Navbar = () => {
   const handleLogOut = () => {
     logOut()
       .then(() => {})
-      .catch((err) => console.log(err));
+      .catch(err => console.log(err));
   };
 
   const navOption = (
@@ -28,7 +28,7 @@ const Navbar = () => {
           // onClick={() => window.location.assign("/")}
           className="text-gray-300 lg:hover:text-slate-400"
         >
-          <NavLink to={"/"}>Home</NavLink>
+          <NavLink to={'/'}>Home</NavLink>
         </li>
 
         <li className="text-gray-300 lg:hover:text-slate-400">
@@ -68,8 +68,8 @@ const Navbar = () => {
           </div>
 
           <div
-            onClick={() => window.location.assign("/")}
-            className="flex justify-center "
+            onClick={() => window.location.assign('/')}
+            className="flex justify-center cursor-pointer"
           >
             <p className="text-xl font-semibold shadow-md">Home</p>
           </div>

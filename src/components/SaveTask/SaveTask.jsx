@@ -1,15 +1,65 @@
-import React from "react";
-import useTask from "../Hooks/useTask";
-import { FaRegEdit } from "react-icons/fa";
+import React from 'react';
+import useTask from '../Hooks/useTask';
+import { FaRegEdit } from 'react-icons/fa';
+import Swal from 'sweetalert2';
 
 const SaveTask = () => {
   const [task, refetch] = useTask();
-  console.log(task);
+
+  const handleDelete = async id => {
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger',
+      },
+      buttonsStyling: false,
+    });
+
+    swalWithBootstrapButtons
+      .fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, delete it!',
+        cancelButtonText: 'No, cancel!',
+        reverseButtons: true,
+      })
+      .then(result => {
+        if (result.isConfirmed) {
+          fetch(`http://localhost:5000/api/v1/task/${id}`, {
+            method: 'DELETE',
+          })
+            .then(response => response.json())
+            .then(data => {
+              console.log(data);
+              refetch();
+            })
+            .catch(error => {
+              console.error('Error:', error);
+            });
+          swalWithBootstrapButtons.fire(
+            'Deleted!',
+            'Your file has been deleted.',
+            'success'
+          );
+        } else if (
+          /* Read more about handling dismissals below */
+          result.dismiss === Swal.DismissReason.cancel
+        ) {
+          swalWithBootstrapButtons.fire(
+            'Cancelled',
+            'Your imaginary file is safe :)',
+            'error'
+          );
+        }
+      });
+  };
 
   return (
     <div className="container mx-auto min-h-[50vh]">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5 m-10">
-        {task?.data.map((service) => (
+        {task?.data.map(service => (
           <div key={service.id} className="card  bg-base-100 shadow-xl">
             <div className="card-body">
               <h2 className="card-title ">{service.title.slice(0, 30)}</h2>
@@ -18,7 +68,10 @@ const SaveTask = () => {
                 <button className="btn btn-square btn-outline">
                   <FaRegEdit className="text-xl" />
                 </button>
-                <button className="btn btn-square btn-outline">
+                <button
+                  onClick={() => handleDelete(service?.id)}
+                  className="btn btn-square btn-outline"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
