@@ -2,10 +2,12 @@ import React from 'react';
 import useTask from '../Hooks/useTask';
 import { FaRegEdit } from 'react-icons/fa';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
+import { format, parseISO } from 'date-fns';
 
 const SaveTask = () => {
   const [task, refetch] = useTask();
-
+  console.log(task);
   const handleDelete = async id => {
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
@@ -63,11 +65,15 @@ const SaveTask = () => {
           <div key={service.id} className="card  bg-base-100 shadow-xl">
             <div className="card-body">
               <h2 className="card-title ">{service.title.slice(0, 30)}</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <p>{service.description}</p>
+              <p> {service?.date}</p>
+
               <div className="flex justify-center items-center gap-6">
-                <button className="btn btn-square btn-outline">
-                  <FaRegEdit className="text-xl" />
-                </button>
+                <Link to={`/task/${service.id}`}>
+                  <button className="btn btn-square btn-outline">
+                    <FaRegEdit className="text-xl" />
+                  </button>
+                </Link>
                 <button
                   onClick={() => handleDelete(service?.id)}
                   className="btn btn-square btn-outline"

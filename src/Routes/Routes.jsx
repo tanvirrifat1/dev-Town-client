@@ -1,46 +1,51 @@
-import { createBrowserRouter } from "react-router-dom";
-import Main from "../Layout/Main";
-import Home from "../pages/home/home/Home";
+import { createBrowserRouter } from 'react-router-dom';
+import Main from '../Layout/Main';
+import Home from '../pages/home/home/Home';
 
-import Login from "../pages/Login/Login";
-import SignUp from "../pages/signIn/SignIn";
+import Login from '../pages/Login/Login';
+import SignUp from '../pages/signIn/SignIn';
 
-import PrivateRoute from "./PrivateRoute";
+import PrivateRoute from './PrivateRoute';
 
-import Dashboard from "../Layout/Dashboard";
+import Dashboard from '../Layout/Dashboard';
 
-import ErrorPage from "../components/Error/ErrorPage";
-import SaveTask from "../components/SaveTask/SaveTask";
+import ErrorPage from '../components/Error/ErrorPage';
+import SaveTask from '../components/SaveTask/SaveTask';
+import TaskUpdated from '../components/SaveTask/TaskUpdated';
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Main />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <Home />,
       },
 
       {
-        path: "/login",
+        path: '/login',
         element: <Login />,
       },
       {
-        path: "/signup",
+        path: '/signup',
         element: <SignUp />,
       },
       {
-        path: "/save",
+        path: '/save',
         element: <SaveTask />,
+      },
+      {
+        path: '/task/:id',
+        element: <TaskUpdated />,
       },
 
       {
-        path: "/secret",
+        path: '/secret',
         element: <PrivateRoute></PrivateRoute>,
       },
       {
-        path: "*",
+        path: '*',
         element: <ErrorPage />,
       },
     ],
