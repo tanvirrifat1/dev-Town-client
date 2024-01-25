@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from 'react';
 
 import {
   GoogleAuthProvider,
@@ -9,10 +9,10 @@ import {
   signInWithPopup,
   signOut,
   updateProfile,
-} from "firebase/auth";
-import { app } from "../firebase/firebase.config";
-import axios from "axios";
-import { TOKEN } from "../pages/Shared/token/token";
+} from 'firebase/auth';
+import { app } from '../firebase/firebase.config';
+import axios from 'axios';
+import { TOKEN } from '../pages/Shared/token/token';
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
@@ -50,14 +50,14 @@ const AuthProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    const unSubs = onAuthStateChanged(auth, (currentUser) => {
+    const unSubs = onAuthStateChanged(auth, currentUser => {
       setUser(currentUser);
       if (currentUser) {
         axios
-          .post("http://localhost:5000/api/v1/auth/login", {
+          .post('https://dev-town-server-2.vercel.app/api/v1/auth/login', {
             email: currentUser.email,
           })
-          .then((data) => {
+          .then(data => {
             // console.log(data?.data?.data);
             localStorage.setItem(TOKEN, data?.data?.data);
           });

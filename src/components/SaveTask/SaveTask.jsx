@@ -3,11 +3,10 @@ import useTask from '../Hooks/useTask';
 import { FaRegEdit } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import { Link } from 'react-router-dom';
-import { format, parseISO } from 'date-fns';
 
 const SaveTask = () => {
   const [task, refetch] = useTask();
-  console.log(task);
+
   const handleDelete = async id => {
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
@@ -29,7 +28,7 @@ const SaveTask = () => {
       })
       .then(result => {
         if (result.isConfirmed) {
-          fetch(`http://localhost:5000/api/v1/task/${id}`, {
+          fetch(`https://dev-town-server-2.vercel.app/api/v1/task/${id}`, {
             method: 'DELETE',
           })
             .then(response => response.json())

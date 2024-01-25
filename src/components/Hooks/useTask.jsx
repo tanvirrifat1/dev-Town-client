@@ -1,7 +1,7 @@
-import axios from "axios";
-import React from "react";
-import { useAuth } from "../../hooks/useAuth";
-import { useQuery } from "@tanstack/react-query";
+import axios from 'axios';
+import React from 'react';
+import { useAuth } from '../../hooks/useAuth';
+import { useQuery } from '@tanstack/react-query';
 
 const useTask = () => {
   const { user } = useAuth();
@@ -14,7 +14,7 @@ const useTask = () => {
     queryKey: [],
     queryFn: async () => {
       const response = await axios.get(
-        `http://localhost:5000/api/v1/task?email=${user?.email}`
+        `https://dev-town-server-2.vercel.app/api/v1/task?email=${user?.email}`
       );
       return response.data;
     },

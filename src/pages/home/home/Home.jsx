@@ -3,7 +3,7 @@ import { AuthContext } from '../../../Providers/AuthProviders';
 import Swal from 'sweetalert2';
 import useTask from '../../../components/Hooks/useTask';
 import useCart from '../../../components/Hooks/useCart';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Form from '../../../components/form/form';
 import FormInput from '../../../components/form/formInput';
 import DatePickerField from '../../../components/form/DatePickerFied';
@@ -15,39 +15,56 @@ const Home = () => {
   const [startDate, setStartDate] = useState(new Date());
   const date = format(startDate, 'PP');
 
-  const navigate = useNavigate();
+  const router = useNavigate();
+
+  const location = useLocation();
 
   const handleDateChange = newDate => {
     setStartDate(newDate);
   };
 
   const onSubmit = async data => {
-    const BookData = {
-      email: user?.email,
-      description: data.description,
-      title: data.title,
-      date: date,
-    };
-    fetch(`http://localhost:5000/api/v1/task/create`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(BookData),
-    })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success === true) {
-          Swal.fire('Task Add successfully!');
-          navigate('/save');
-          // refetch();
-        } else {
-          Swal.fire('Already add the task!');
-        }
+    if (user) {
+      const BookData = {
+        email: user?.email,
+        description: data.description,
+        title: data.title,
+        date: date,
+      };
+      fetch(`https://dev-town-server-2.vercel.app/api/v1/task/create`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(BookData),
       })
-      .catch(error => {
-        console.error('Error:', error);
+        .then(response => response.json())
+        .then(data => {
+          if (data.success === true) {
+            Swal.fire('Task Add successfully!');
+            router('/save');
+            // refetch();
+          } else {
+            Swal.fire('Already add the task!');
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    } else {
+      Swal.fire({
+        title: 'Please Login First?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, Login',
+      }).then(result => {
+        if (result.isConfirmed) {
+          router('/login', { state: { from: location } });
+        }
       });
+    }
   };
 
   const option = [

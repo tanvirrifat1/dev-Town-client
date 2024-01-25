@@ -16,7 +16,7 @@ const TaskUpdated = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/v1/task/${id}`
+          `https://dev-town-server-2.vercel.app/api/v1/task/${id}`
         );
         setUserData(response.data);
       } catch (error) {
@@ -45,7 +45,7 @@ const TaskUpdated = () => {
   const onSubmit = async data => {
     try {
       const response = await axios.patch(
-        `http://localhost:5000/api/v1/task/${id}`,
+        `https://dev-town-server-2.vercel.app/api/v1/task/${id}`,
         {
           description: data.description,
           title: data.title,

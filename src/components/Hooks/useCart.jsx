@@ -1,5 +1,5 @@
-import { useQuery } from "@tanstack/react-query";
-import { useAuth } from "../../hooks/useAuth";
+import { useQuery } from '@tanstack/react-query';
+import { useAuth } from '../../hooks/useAuth';
 
 const useCart = () => {
   const { user } = useAuth();
@@ -8,7 +8,7 @@ const useCart = () => {
     queryKey: [],
     queryFn: async () => {
       const res = await fetch(
-        `http://localhost:5000/api/v1/task?email=${user?.email}`
+        `https://dev-town-server-2.vercel.app/api/v1/task?email=${user?.email}`
       );
       return res.json();
     },
