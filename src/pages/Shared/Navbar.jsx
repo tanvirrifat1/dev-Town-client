@@ -7,6 +7,7 @@ import { getUserInfo } from './auth/auth.service';
 import { FaUserLarge } from 'react-icons/fa6';
 
 import useTask from '../../components/Hooks/useTask';
+import { FaTasks } from 'react-icons/fa';
 
 const Navbar = () => {
   const [task, refetch] = useTask();
@@ -71,7 +72,9 @@ const Navbar = () => {
             onClick={() => window.location.assign('/')}
             className="flex justify-center cursor-pointer"
           >
-            <p className="text-xl font-semibold shadow-md">Home</p>
+            <p className="text-xl font-semibold shadow-md">
+              <FaTasks />
+            </p>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">

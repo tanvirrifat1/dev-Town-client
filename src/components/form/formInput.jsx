@@ -1,5 +1,5 @@
-import { Controller, useForm, useFormContext } from "react-hook-form";
-import { getErrorMessageByPropertyName } from "./schema.validator";
+import { Controller, useForm, useFormContext } from 'react-hook-form';
+import { getErrorMessageByPropertyName } from './schema.validator';
 
 const FormInput = ({
   name,
@@ -38,7 +38,7 @@ const FormInput = ({
           />
         )}
       />
-      <small style={{ color: "red" }}>{errorMessage}</small>
+      <small style={{ color: 'red' }}>{errorMessage}</small>
     </>
   );
 };

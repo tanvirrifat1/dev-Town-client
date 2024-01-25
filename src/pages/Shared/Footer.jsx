@@ -1,12 +1,13 @@
-import { AiFillLinkedin } from "react-icons/ai";
+import { AiFillLinkedin } from 'react-icons/ai';
 import {
   FaGithubSquare,
   FaShoppingBasket,
+  FaTasks,
   FaTwitterSquare,
-} from "react-icons/fa";
-import { IoIosMail } from "react-icons/io";
-import { Link } from "react-router-dom";
-import { FaLocationDot } from "react-icons/fa6";
+} from 'react-icons/fa';
+import { IoIosMail } from 'react-icons/io';
+import { Link } from 'react-router-dom';
+import { FaLocationDot } from 'react-icons/fa6';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -15,7 +16,7 @@ const Footer = () => {
     <div className="lg:w-full">
       <footer
         style={{
-          backgroundColor: "#455a64",
+          backgroundColor: '#455a64',
         }}
         className="divide-y p-12"
       >
@@ -26,15 +27,15 @@ const Footer = () => {
               className="flex justify-center space-x-3 lg:justify-start"
             >
               <div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-violet-400">
-                <FaShoppingBasket className="text-4xl text-white" />
+                <FaTasks className="text-4xl text-white" />
               </div>
               <div className="self-center text-2xl text-white font-semibold">
-                Time-Square
+                Task-Management
               </div>
             </div>
             <div className="text-white lg:ml-16 ">
-              <p>Allright Reserved </p>
-              <p>Time-Square </p>
+              <p>AllRight Reserved </p>
+              <p>Task-Management </p>
             </div>
           </div>
           <div className="grid grid-cols-2 text-sm gap-x-3 text-white gap-y-8 lg:w-2/3 sm:grid-cols-4">
@@ -44,22 +45,22 @@ const Footer = () => {
               </h3>
               <ul className="space-y-1">
                 <li>
-                  <Link to={"/"} rel="noopener noreferrer">
+                  <Link to={'/'} rel="noopener noreferrer">
                     HomePage
                   </Link>
                 </li>
                 <li>
-                  <Link to={"/login"} rel="noopener noreferrer">
+                  <Link to={'/login'} rel="noopener noreferrer">
                     Login
                   </Link>
                 </li>
                 <li>
-                  <Link to={"/contact"} rel="noopener noreferrer">
+                  <Link to={'/'} rel="noopener noreferrer">
                     Contact us
                   </Link>
                 </li>
                 <li>
-                  <Link to={"/menu"} rel="noopener noreferrer">
+                  <Link to={'/menu'} rel="noopener noreferrer">
                     Gallery
                   </Link>
                 </li>

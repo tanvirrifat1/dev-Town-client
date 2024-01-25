@@ -1,14 +1,14 @@
-import { useContext, useState } from "react";
-import { Helmet } from "react-helmet-async";
+import { useContext, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import img from "../../assets/others/authentication.gif";
+import img from '../../assets/others/authentication.gif';
 
-import { AuthContext } from "../../Providers/AuthProviders";
-import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
-import { FcGoogle } from "react-icons/fc";
-import Swal from "sweetalert2";
-import { BiArrowBack } from "react-icons/bi";
-import { toast } from "react-toastify";
+import { AuthContext } from '../../Providers/AuthProviders';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { FcGoogle } from 'react-icons/fc';
+import Swal from 'sweetalert2';
+import { BiArrowBack } from 'react-icons/bi';
+import { toast } from 'react-toastify';
 
 const Login = () => {
   const { signIn, googleSignIn } = useContext(AuthContext);
@@ -16,76 +16,76 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const from = location.state?.from?.pathname || "/";
+  const from = location.state?.from?.pathname || '/';
 
-  const handleLogin = (e) => {
+  const handleLogin = e => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
     signIn(email, password)
-      .then((result) => {
+      .then(result => {
         const user = result.user;
         console.log(user);
         Swal.fire({
-          title: "User Login Successfully!",
+          title: 'User Login Successfully!',
           showClass: {
-            popup: "animate__animated animate__fadeInDown",
+            popup: 'animate__animated animate__fadeInDown',
           },
           hideClass: {
-            popup: "animate__animated animate__fadeOutUp",
+            popup: 'animate__animated animate__fadeOutUp',
           },
         });
         navigate(from, { replace: true });
       })
-      .catch((error) => {
+      .catch(error => {
         const errorCode = error.code;
         const errorMessage = error.message;
         toast(errorCode, errorMessage, {
-          position: "top-center",
+          position: 'top-center',
           autoClose: 500,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: 'light',
         });
       });
   };
 
   const handleGoogleLogin = () => {
     googleSignIn()
-      .then((result) => {
+      .then(result => {
         const user = result.user;
-        console.log(user);
+
         const saveUser = {
           name: user.displayName,
           email: user.email,
           image: user.photoURL,
         };
 
-        fetch("http://localhost:5000/api/v1/user", {
-          method: "POST",
+        fetch('http://localhost:5000/api/v1/user', {
+          method: 'POST',
           headers: {
-            "content-type": "application/json",
+            'content-type': 'application/json',
           },
           body: JSON.stringify(saveUser),
         })
-          .then((res) => res.json())
-          .then((user) => {
+          .then(res => res.json())
+          .then(user => {
             if (user) {
               navigate(from, { replace: true });
             }
           });
       })
-      .catch((err) => console.error(err));
+      .catch(err => console.error(err));
   };
 
   return (
     <div>
       <div>
-        <Link to={"/"}>
+        <Link to={'/'}>
           <BiArrowBack className="text-3xl ml-6 mt-9" />
         </Link>
       </div>

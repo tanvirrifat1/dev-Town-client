@@ -8,6 +8,7 @@ import Form from '../../../components/form/form';
 import FormInput from '../../../components/form/formInput';
 import DatePickerField from '../../../components/form/DatePickerFied';
 import { format } from 'date-fns';
+import SelectFormField from '../../../components/form/seleteFormFiled';
 
 const Home = () => {
   const { user } = useContext(AuthContext);
@@ -49,13 +50,32 @@ const Home = () => {
       });
   };
 
+  const option = [
+    {
+      label: 'Web Development',
+      value: 'Web Development',
+    },
+    {
+      label: 'Web Designer',
+      value: 'Web Designer',
+    },
+    {
+      label: 'Graphic Designer',
+      value: 'Graphic Designer',
+    },
+    {
+      label: 'Digital Marketing',
+      value: 'Digital Marketing',
+    },
+  ];
+
   return (
     <div className="bg-white max-w-[1020px] mx-auto my-24">
       <div className="flex flex-wrap">
         <div className="w-full px-4">
           <div className="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
             <h2 className="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[40px]">
-              Task create Carefully
+              Task Manage Carefully
             </h2>
           </div>
         </div>
@@ -65,11 +85,12 @@ const Home = () => {
         <div className="p-10 shadow-md ">
           <div className="flex gap-3 pt-5">
             <div className="w-full ">
-              <FormInput
+              <SelectFormField
                 name="title"
                 label="Title"
                 type="text"
-                placeholder="Enter Title"
+                options={option}
+                // placeholder="Enter Title"
                 id="title"
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white read-only"
               />

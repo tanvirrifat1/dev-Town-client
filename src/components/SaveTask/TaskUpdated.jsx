@@ -6,6 +6,7 @@ import DatePickerField from '../form/DatePickerFied';
 import { format } from 'date-fns';
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import SelectFormField from '../form/seleteFormFiled';
 
 const TaskUpdated = () => {
   const { id } = useParams();
@@ -25,8 +26,6 @@ const TaskUpdated = () => {
 
     fetchData();
   }, [id]);
-
-  console.log(userData);
 
   const Values = {
     title: userData?.data.title,
@@ -67,6 +66,25 @@ const TaskUpdated = () => {
     }
   };
 
+  const option = [
+    {
+      label: 'Web Development',
+      value: 'Web Development',
+    },
+    {
+      label: 'Web Designer',
+      value: 'Web Designer',
+    },
+    {
+      label: 'Graphic Designer',
+      value: 'Graphic Designer',
+    },
+    {
+      label: 'Digital Marketing',
+      value: 'Digital Marketing',
+    },
+  ];
+
   return (
     <div>
       <div className="bg-white max-w-[1020px] mx-auto my-24">
@@ -84,11 +102,12 @@ const TaskUpdated = () => {
           <div className="p-10 shadow-md ">
             <div className="flex gap-3 pt-5">
               <div className="w-full ">
-                <FormInput
+                <SelectFormField
                   name="title"
                   label="Title"
+                  options={option}
                   type="text"
-                  placeholder="Enter Title"
+                  // placeholder="Enter Title"
                   id="title"
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white read-only"
                 />
